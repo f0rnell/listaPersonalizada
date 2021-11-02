@@ -11,27 +11,19 @@
     <ion-row>
       <ion-col *ngFor="let user of users | async" size-xl="2" size-lg="2" size-md="4" size-sm="6" size-xs="12">
         <ion-card>
-          <ioncard-content>
+          <ion-card-content>
             <ion-chip>
-              <ion-avatar>
-                <img [src]="user.picture.medium">
-              </ion-avatar>
-              <ion-label>{{ user.name.first }} {{ user.name.last }}</ion-label>
+              <ion-label class="vertical">{{ user.nombre }} {{ user.apellidos }}</ion-label>
             </ion-chip>
-            <ion-icon *ngIf = "user.gender == 'male'" name="man-outline" color = "primary"></ion-icon>
-            <ion-icon *ngIf = "user.gender == 'female'" name="woman-outline" color = "danger"></ion-icon>
+            <ion-icon *ngIf = "user.genero == 'Male'" name="man-outline" color = "primary"></ion-icon>
+            <ion-icon *ngIf = "user.genero == 'Female'" name="woman-outline" color = "danger"></ion-icon>
             <br>
             <br>
-            <ion-label>{{ user.location.country}}</ion-label>
+            <ion-label>DNI: {{ user.dni}}</ion-label>
             <br>
             <br>
-            <ion-label>
-              Lorem fistrum condemor torpedo sexuarl de la pradera por la gloria de mi madre no 
-              puedor mamaar condemor. Benemeritaar qué dise usteer va usté muy cargadoo no puedor torpedo
-              mamaar diodeno a wan al ataquerl. Papaar papaar papaar papaar ese pedazo de papaar papaar 
-              amatomaa.
-            </ion-label>
-          </ioncard-content>
+            <ion-label class="horizontal">Nacionalidad: {{ user.idioma}}</ion-label>
+          </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
