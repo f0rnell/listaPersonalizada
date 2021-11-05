@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 export class HomePage {
 
   users: any;
+  filtro: string = '';
 
   constructor(private httpClient: HttpClient) {
     this.users = this.httpClient.get('https://raw.githubusercontent.com/f0rnell/listaPersonalizada/master/datos.json');
